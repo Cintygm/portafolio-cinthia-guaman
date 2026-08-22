@@ -147,3 +147,55 @@ section {
   background-color: var(--color-accent-warm);
   transform: translateY(-2px);
 }
+section h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 1.6rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+}
+
+.about-content p {
+  color: var(--color-text-muted);
+  max-width: 70ch;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.skill-card {
+  flex: 1 1 220px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: var(--spacing-md);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.skill-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  color: var(--color-accent-warm);
+  font-size: 0.85rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.skill-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+.skill-card p { color: var(--color-text-muted); font-size: 0.9rem; }
