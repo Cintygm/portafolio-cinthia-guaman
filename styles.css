@@ -199,3 +199,70 @@ section h2 {
 
 .skill-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
 .skill-card p { color: var(--color-text-muted); font-size: 0.9rem; }
+.section-hint {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-md);
+  margin-top: -0.75rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.project-card {
+  flex: 1 1 300px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(94, 234, 212, 0.12);
+}
+
+.project-info { padding: var(--spacing-md); }
+.project-info h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+.project-info p { color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-sm); }
+
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  transition: color 0.2s ease;
+}
+.project-link:hover { color: var(--color-accent-warm); }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 480px;
+}
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-text-muted); }
+.form-group input,
+.form-group textarea {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+.contact-form .cta-button { align-self: flex-start; }
+
