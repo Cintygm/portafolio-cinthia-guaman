@@ -91,3 +91,59 @@ h1, h2, h3 {
 }
 .site-footer a { color: var(--color-accent); transition: color 0.2s ease; }
 .site-footer a:hover { color: var(--color-accent-warm); }
+section {
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.hero-text { flex: 1 1 420px; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  color: var(--color-accent-warm);
+  font-size: 0.85rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-description {
+  color: var(--color-text-muted);
+  max-width: 46ch;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-image { flex: 0 1 280px; display: flex; justify-content: center; }
+.hero-image img { width: 260px; border-radius: 50%; }
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.85rem 1.6rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--color-accent-warm);
+  transform: translateY(-2px);
+}
