@@ -25,6 +25,9 @@
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar a modo claro">
+        <span id="theme-icon">🌙</span>
+      </button>
     </div>
   </header>
 
@@ -42,12 +45,22 @@
           he realizado durante mi formación.
         </p>
         <a href="#proyectos" class="cta-button">Ver mis proyectos</a>
+
+        <div class="visitor-box">
+          <label for="visitor-name">¿Cómo te llamas? Lo recordaré en tu próxima visita</label>
+          <div class="visitor-box-row">
+            <input type="text" id="visitor-name" placeholder="Escribe tu nombre">
+            <button type="button" id="save-name-btn" class="mini-button">Guardar</button>
+          </div>
+          <p id="visitor-greeting" class="visitor-greeting"></p>
+        </div>
       </div>
       <div class="hero-image">
         <img src="img/avatar.svg" alt="Avatar de Cinthia Guamán">
       </div>
     </section>
- <!-- SOBRE MÍ -->
+
+    <!-- SOBRE MÍ -->
     <section id="sobre-mi" class="about">
       <h2><span class="section-number">01</span> Sobre mí</h2>
       <article class="about-content">
@@ -66,37 +79,39 @@
       <h2><span class="section-number">02</span> Habilidades</h2>
       <div class="skills-grid">
         <article class="skill-card">
-          <span class="skill-tag">&lt;/&gt;</span>
+          <span class="skill-tag" data-default="&lt;/&gt;" data-hover="✓">&lt;/&gt;</span>
           <h3>Programación</h3>
           <p>Desarrollo mis conocimientos para crear soluciones mediante código.</p>
         </article>
         <article class="skill-card">
-          <span class="skill-tag">AI</span>
+          <span class="skill-tag" data-default="AI" data-hover="✓">AI</span>
           <h3>Sistemas Inteligentes</h3>
           <p>Conocimientos e interés en inteligencia artificial y sistemas inteligentes.</p>
         </article>
         <article class="skill-card">
-          <span class="skill-tag">?!</span>
+          <span class="skill-tag" data-default="?!" data-hover="✓">?!</span>
           <h3>Resolución de problemas</h3>
           <p>Capacidad para analizar situaciones y buscar soluciones.</p>
         </article>
         <article class="skill-card">
-          <span class="skill-tag">::</span>
+          <span class="skill-tag" data-default="::" data-hover="✓">::</span>
           <h3>Trabajo en equipo</h3>
           <p>Colaboración con compañeros para desarrollar proyectos.</p>
         </article>
       </div>
     </section>
-  <!-- PROYECTOS -->
+
+    <!-- PROYECTOS -->
     <section id="proyectos" class="projects">
       <h2><span class="section-number">03</span> Proyectos</h2>
       <p class="section-hint">
-       Proyectos y Contactos.
+        Estos son proyectos de ejemplo. Reemplázalos con tus propios proyectos académicos o personales.
       </p>
       <div class="projects-grid">
 
-        <article class="project-card">
-          <img src="img/proyecto1.jpg" alt="Captura del proyecto Portafolio Personal">
+        <article class="project-card" data-project-id="portafolio">
+          <button class="favorite-btn" aria-label="Marcar como favorito">☆</button>
+          <img src="img/proyecto1.svg" alt="Captura del proyecto Portafolio Personal">
           <div class="project-info">
             <h3>Portafolio Personal</h3>
             <p>Sitio web desarrollado con HTML y CSS para presentar mi perfil académico y profesional.</p>
@@ -104,8 +119,9 @@
           </div>
         </article>
 
-        <article class="project-card">
-          <img src="img/proyecto2.jpg" alt="Captura del proyecto Analizador de Datos">
+        <article class="project-card" data-project-id="analizador">
+          <button class="favorite-btn" aria-label="Marcar como favorito">☆</button>
+          <img src="img/proyecto2.svg" alt="Captura del proyecto Analizador de Datos">
           <div class="project-info">
             <h3>Analizador de Datos</h3>
             <p>Proyecto académico enfocado en el procesamiento y visualización de datos.</p>
@@ -113,8 +129,9 @@
           </div>
         </article>
 
-        <article class="project-card">
-          <img src="img/proyecto3.jpg" alt="Captura del proyecto Chatbot Inteligente">
+        <article class="project-card" data-project-id="chatbot">
+          <button class="favorite-btn" aria-label="Marcar como favorito">☆</button>
+          <img src="img/proyecto3.svg" alt="Captura del proyecto Chatbot Inteligente">
           <div class="project-info">
             <h3>Chatbot Inteligente</h3>
             <p>Ejercicio de clase relacionado con sistemas inteligentes y automatización de respuestas.</p>
@@ -128,35 +145,40 @@
     <!-- CONTACTO -->
     <section id="contacto" class="contact">
       <h2><span class="section-number">04</span> Contacto</h2>
-      <p class="section-hint">Formulario.</p>
-      <form class="contact-form">
+      <p class="section-hint">Este formulario es solo visual y no envía información. Tu borrador se guarda automáticamente.</p>
+      <form id="contact-form" class="contact-form" novalidate>
         <div class="form-group">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+          <span class="error-message" id="error-nombre"></span>
         </div>
         <div class="form-group">
           <label for="correo">Correo electrónico</label>
           <input type="email" id="correo" name="correo" placeholder="tu@correo.com">
+          <span class="error-message" id="error-correo"></span>
         </div>
         <div class="form-group">
           <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+          <span class="error-message" id="error-mensaje"></span>
         </div>
         <button type="submit" class="cta-button">Enviar mensaje</button>
+        <p id="form-confirmation" class="form-confirmation" hidden>
+          ¡Gracias por tu mensaje! Te contactaré pronto.
+        </p>
       </form>
     </section>
-
-
-
-
-    
 
   </main>
 
   <footer class="site-footer">
     <p>© <span id="year">2026</span> Cinthia Marisol Guamán Montaño</p>
+    <p class="visit-counter">Visitas simuladas: <span id="visit-count">0</span></p>
     <a href="https://github.com/" target="_blank" rel="noopener">Mi perfil de GitHub</a>
   </footer>
 
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Volver al inicio">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
